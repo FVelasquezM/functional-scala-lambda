@@ -18,9 +18,9 @@ lazy val root = (project in file("."))
     )
   )
 
-assemblyJarName in assembly := "lambda-scala-seed.jar"
+assembly / assemblyOutputPath := file("target/lambdaFunction.jar")
 
-assemblyMergeStrategy in assembly := {
+assembly / assemblyMergeStrategy := {
   case PathList("META-INF", xs @ _*) => MergeStrategy.discard
   case x                             => MergeStrategy.first
 }

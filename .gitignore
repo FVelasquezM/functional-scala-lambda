@@ -2,3 +2,5 @@
 *.log
 .vscode/*
 .metals/*
+.aws-sam/*
+samconfig.toml
