@@ -1,3 +1,10 @@
+https://www.varokas.com/aws-lambda-functions-in-scala/
+https://leanpub.com/pfhais/read#leanpub-auto-database-layer-1
+https://www.signifytechnology.com/blog/2018/08/purely-functional-web-apis-in-scala-by-anatolii-kmetiuk?source=google.com
+https://medium.com/rahasak/dependency-injection-with-reader-monad-in-scala-fe05b29e04dd
+
+
+
 # functional-scala-lambda
 
 This project contains source code and supporting files for a serverless application that you can deploy with the SAM CLI. It includes the following files and folders.
