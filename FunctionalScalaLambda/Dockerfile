@@ -5,4 +5,4 @@ RUN sbt assembly
 
 FROM public.ecr.aws/lambda/java:11
 COPY --from=builder /lambda/src/target/lambdaFunction.jar ${LAMBDA_TASK_ROOT}/lib/
-CMD ["example.Main::handler"]
+CMD ["com.fvelasquezm.functionalscalalambda.infrastructure.main.Main::handler"]

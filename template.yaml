@@ -8,13 +8,16 @@ Description: >
 Globals:
   Function:
     Timeout: 20
-    MemorySize: 256
+    MemorySize: 512
 
 Resources:
   FunctionalScalaLambda:
     Type: AWS::Serverless::Function
     Properties:
       PackageType: Image
+      Policies:
+        - DynamoDBReadPolicy:
+                      TableName: users
     Metadata:
       DockerTag: java8.al2-maven-v1
       DockerContext: ./FunctionalScalaLambda

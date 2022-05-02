@@ -1,2 +1,4 @@
 /.bsp/
 target/
+.bloop/*
+project/.bloop/*
