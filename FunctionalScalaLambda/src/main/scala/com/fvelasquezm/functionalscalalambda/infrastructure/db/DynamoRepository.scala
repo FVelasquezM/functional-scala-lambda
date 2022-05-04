@@ -3,6 +3,7 @@ package com.fvelasquezm.functionalscalalambda.infrastructure.db
 import cats.effect.IO
 import com.fvelasquezm.functionalscalalambda.domain.traits.Repository
 import com.fvelasquezm.functionalscalalambda.domain.models.{SearchFilter, User}
+import com.fvelasquezm.functionalscalalambda.helpers._
 import software.amazon.awssdk.services.dynamodb.DynamoDbClient
 import software.amazon.awssdk.services.dynamodb.model.{AttributeValue, GetItemRequest}
 import scala.jdk.CollectionConverters._
@@ -21,7 +22,8 @@ object DynamoRepository extends Repository {
           .build()
       ).item.asScala
 
-      User(item.map((x: String, y: AttributeValue) => (x, y.s)).toMap)
+      item.map((x: String, y: AttributeValue) => (x, y.s)).toMap.convert[User]
+      //User(item.map((x: String, y: AttributeValue) => (x, y.s)).toMap)
     }
 
   //def saveUser(user: User): [Unit] = ???
